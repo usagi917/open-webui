@@ -75,6 +75,7 @@ cp .env.example .env
 ```bash
 ./run-compose.sh --build
 ```
+ docker compose up -d
 
 Web UIは既定で http://localhost:3000 に公開されます。
 
