@@ -9,7 +9,7 @@
 
 > An extensible, feature-rich, self-hosted AI platform that runs fully offline. Works with Ollama and OpenAI-compatible APIs and includes a built-in RAG inference engine.
 
-This README focuses on local development and Docker-based test development. For deployment, see the docs.
+This README focuses on Docker-based development and testing. For deployment, see the docs.
 
 - Docs: https://docs.openwebui.com/
 - Troubleshooting: https://docs.openwebui.com/troubleshooting/
@@ -20,47 +20,9 @@ This README focuses on local development and Docker-based test development. For 
 
 ## Prerequisites
 
-- Node.js: `>=18.13.0 <=22.x.x`
-- Package manager: pnpm (recommended) / npm
-- Python: `>=3.11 <3.13.0a1`
-- Python package manager: uv (recommended) / pip
-- Docker + Docker Compose (for Docker dev/test)
+- Docker + Docker Compose
 
-## Local Development (split front/back)
-
-### Backend
-
-```bash
-cd backend
-uv pip install -r requirements.txt
-./dev.sh
-```
-
-```bash
-# If you are not using uv
-cd backend
-pip install -r requirements.txt
-./dev.sh
-```
-
-The backend starts on http://localhost:8080 by default.
-
-### Frontend
-
-```bash
-pnpm install
-pnpm dev
-```
-
-The Vite dev server starts on http://localhost:5173 by default.
-
-```bash
-# If you are not using pnpm
-npm install
-npm run dev
-```
-
-### Environment Variables
+## Environment Variables
 
 ```bash
 cp .env.example .env

@@ -9,7 +9,7 @@
 
 > オフラインで動作する、拡張可能で機能豊富なセルフホスト型AIプラットフォーム。OllamaやOpenAI互換APIに対応し、RAG用の推論エンジンを内蔵しています。
 
-このREADMEはローカル開発とDockerベースのテスト開発に焦点を当てています。運用/導入はドキュメントを参照してください。
+このREADMEはDockerベースの開発/テストに焦点を当てています。運用/導入はドキュメントを参照してください。
 
 - ドキュメント: https://docs.openwebui.com/
 - トラブルシューティング: https://docs.openwebui.com/troubleshooting/
@@ -20,47 +20,9 @@
 
 ## 前提条件
 
-- Node.js: `>=18.13.0 <=22.x.x`
-- パッケージマネージャー: pnpm (推奨) / npm
-- Python: `>=3.11 <3.13.0a1`
-- Pythonパッケージマネージャー: uv (推奨) / pip
-- Docker + Docker Compose (Docker開発/テスト時)
+- Docker + Docker Compose
 
-## ローカル開発 (フロント/バック分離)
-
-### バックエンド
-
-```bash
-cd backend
-uv pip install -r requirements.txt
-./dev.sh
-```
-
-```bash
-# uvを使わない場合
-cd backend
-pip install -r requirements.txt
-./dev.sh
-```
-
-バックエンドは既定で http://localhost:8080 で起動します。
-
-### フロントエンド
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Viteの開発サーバーは既定で http://localhost:5173 で起動します。
-
-```bash
-# pnpmを使わない場合
-npm install
-npm run dev
-```
-
-### 環境変数
+## 環境変数
 
 ```bash
 cp .env.example .env
