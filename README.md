@@ -37,7 +37,6 @@ cp .env.example .env
 ```bash
 ./run-compose.sh --build
 ```
- docker compose up -d
 
 Web UIは既定で http://localhost:3000 に公開されます。
 
@@ -54,13 +53,13 @@ Web UIは既定で http://localhost:3000 に公開されます。
 ### 停止
 
 ```bash
-docker compose down --remove-orphans
+docker compose down
 ```
 
 ### Dockerのクリーンアップ
 
 ```bash
-docker compose down --remove-orphans --rmi local -v
+docker compose down -v --rmi local --remove-orphans
 ```
 
 ※ `-v` はボリュームも削除するため、保存済みデータは失われます。
